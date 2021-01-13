@@ -9,6 +9,22 @@ package se.lexicon.data;
 //o String [] getProducts () - Returns all Products' names and product numbers.
 
 
-public interface VendingMachine {
+import se.lexicon.model.Product;
+
+public interface VendingMachineData {
+
+    Product addProduct(Product product);
+
+    void addCurrency (int amount);
+    Product request (int productNumber);
+    String getDescription (int productNumber);
+    int getBalance (int money); //Deposit pool
+    Product [] getProducts (); //Buy product
+    int endSession();
+
 
 }
+
+
+
+
