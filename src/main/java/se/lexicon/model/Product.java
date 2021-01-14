@@ -3,8 +3,11 @@ package se.lexicon.model;
 import java.util.Objects;
 
 public abstract class Product {
+    //Fields for product state
     private int price;
+    // private String productType;
     private String productName;
+
 
     //Constructor
     public Product() {
@@ -14,10 +17,11 @@ public abstract class Product {
         this.price = price;
         this.productName = productName;
     }
-
+    //Common functionality
     public String examine() {
-        return "The "+productName+"price is "+price ;
+        return "The " + productName + " price is " + price ;
     }
+    //Common functionality
     public String use(){
         return "The " + productName + " is in use";
     }

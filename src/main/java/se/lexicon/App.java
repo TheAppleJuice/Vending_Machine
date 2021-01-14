@@ -4,7 +4,6 @@ package se.lexicon;
 import se.lexicon.data.VendingMachineData;
 import se.lexicon.data.VendingMachineDataImpl;
 import se.lexicon.model.Product;
-import sun.lwawt.macosx.CSystemTray;
 
 import java.util.Scanner;
 
@@ -13,17 +12,20 @@ public class App {
     public static void main(String[] args) {
 
         //Product [0] = "Banana"; Hur lägger jag till produkter till array?
+        //Product [] banana = new Product[]; ??
+
 
         VendingMachineData vendingMachineData = new VendingMachineDataImpl();
         while (true){
             System.out.println("#######################");
             System.out.println("### Vending machine ###");
-            System.out.println(" 1. add money");
-            System.out.println(" 2. show balance");
-            System.out.println(" 3. list all products");
-            System.out.println(" 4. show product description");
-            System.out.println(" 5. buy a product");
-            System.out.println(" 6. end session");
+            System.out.println(" 1. add money"); //void addCurrency (int amount);
+            System.out.println(" 2. show balance"); //int getBalance (int money); //Deposit pool
+            //todo: What about String examine() ?
+            System.out.println(" 3. list all products"); //Product [] getProducts ();
+            System.out.println(" 4. show product description"); //String getDescription (int productNumber);
+            System.out.println(" 5. buy a product"); //Product request (int productNumber);
+            System.out.println(" 6. end session"); // int endSession(); Return String + balance
             System.out.println(" 7. EXIT");
 
             Scanner scanner = new Scanner(System.in);
