@@ -9,19 +9,21 @@ package se.lexicon.data;
 //o String [] getProducts () - Returns all Products' names and product numbers.
 
 
+import se.lexicon.model.Denominations;
 import se.lexicon.model.Product;
 
 public interface VendingMachineData {
 
-    Product addProduct(Product product);
+    //Product addProduct(Product product);
 
     void addCurrency (int amount); //System.in, add amount to (int money) Array+1?
     Product request (int productNumber); //buy product!
     //todo: Check author example.
     String getDescription (int productNumber); // single product description. String + productNumber (kolla författare + bok)
-    int getBalance (int money); //Deposit pool. Return String + (int money)
+    int getBalance (); //Deposit pool. Return String + (int money)
     Product [] getProducts (); // List all products
     int endSession(); //Return change from (int money) Return String + balance
+    Product addProduct(Product product);
 
 
 }

@@ -20,4 +20,5 @@ private int denominationCurrency;
     public void setGetDenominations(int getDenominations) {
         this.denominationCurrency = getDenominations;
     }
+
 }
