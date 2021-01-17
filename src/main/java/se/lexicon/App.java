@@ -41,14 +41,11 @@ public class App {
         vendingMachine.addProduct(product8);
         vendingMachine.addProduct(product9);
 
-
-
         while (true){
             System.out.println("#######################");
             System.out.println("### Vending machine ###");
             System.out.println(" 1. Add money"); //void addCurrency (int amount);
             System.out.println(" 2. Show balance"); //int getBalance (int money); //Deposit pool
-            //todo: What about String examine() ?
             System.out.println(" 3. List all products"); //Product [] getProducts ();
             System.out.println(" 4. Show product description"); //String getDescription (int productNumber);
             System.out.println(" 5. Buy a product"); //Product request (int productNumber);
@@ -100,11 +97,11 @@ public class App {
                     break;
                 // DONE
                 case "5": // Buy a product
-                    // after buying : product.examine
                     System.out.println("---------------------------------\n");
-                    System.out.println("What product do you want to buy?: ");
-                    int buyProduct = scanner.nextInt();
-                    System.out.println(vendingMachine.request(buyProduct));
+                    System.out.println("What product do you want to buy? (Enter product number): ");
+                    int productNumber1 = scanner.nextInt();
+                    System.out.println(vendingMachine.request(productNumber1));
+                    System.out.println(vendingMachine.getDescription(productNumber1));
                     System.out.println("---------------------------------\n");
 
                     break;
@@ -116,6 +113,7 @@ public class App {
 
                 //DONE
                 case "7":
+                    System.out.println("Have a nice day!");
                     System.exit(0);
 
                     break;

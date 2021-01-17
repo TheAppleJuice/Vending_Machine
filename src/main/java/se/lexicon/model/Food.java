@@ -39,12 +39,12 @@ public class Food extends Product{
 
     @Override
     public String examine() {
-        return super.examine() + " and has " + calories + " calories";
+        return super.examine() + "\nThe selected product has " + calories + " calories";
     }
 
     @Override
     public String use() {
-        return super.use();
+        return super.use() + " Enjoy your meal!";
     }
 
     @Override

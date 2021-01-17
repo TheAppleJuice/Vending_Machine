@@ -47,7 +47,7 @@ public class Drink extends Product{
 
     @Override
     public String use() {
-        return super.use() + "In use";
+        return super.use() + " Enjoy your drink!";
     }
 
     @Override

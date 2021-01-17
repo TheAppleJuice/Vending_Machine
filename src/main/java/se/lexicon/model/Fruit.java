@@ -42,12 +42,12 @@ public class Fruit extends Product {
 
     @Override
     public String examine() {
-        return super.examine() + " The product color is: " + color;
+        return super.examine() + "\n The product color is: " + color;
     }
 
     @Override
     public String use() {
-        return super.use();
+        return super.use() + " Enjoy!";
     }
 
     @Override

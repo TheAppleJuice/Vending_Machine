@@ -9,8 +9,7 @@ public abstract class Product {
     private int price;
     private LocalDate expireDate;
     private String productName;
-    // todo: Kolla rad 13 om den ska vara med?!
-    //private Denominations denominations;
+
 
 
     //Constructor
@@ -26,11 +25,11 @@ public abstract class Product {
 
     //Common functionality
     public String examine() {
-        return productName + " and costs " + price + "kr." + " It expires: " + expireDate ;
+        return productName + " and costs " + price + "kr." + "\nIt expires:  " + expireDate ;
     }
     //Common functionality
     public String use(){
-        return "The " + productName + " is in use";
+        return "You bought a " + productName + ".";
     }
 
     public int getProductNumber() {

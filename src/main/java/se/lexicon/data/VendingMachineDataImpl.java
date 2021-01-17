@@ -1,5 +1,6 @@
 package se.lexicon.data;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import se.lexicon.model.*;
 
 import java.util.Arrays;
@@ -10,11 +11,6 @@ public class VendingMachineDataImpl implements VendingMachineData {
     private int moneyPool=0;
     int[] denominations = new int[]{1,2,5,10,20,50,100,200,500,1000};
     private Product[] products = new Product[0];
-    /*
-    private Fruit[] fruits = new Fruit[0];
-    private Food [] foods = new Food[0];
-    private Drink [] drinks = new Drink[0];
-     */
 
     // DONE
     @Override
@@ -22,7 +18,7 @@ public class VendingMachineDataImpl implements VendingMachineData {
 
         //write for statement
         // search by amount
-        // after finding you can add to monyey pool
+        // after finding you can add to money pool
                 if (amount >= denominations[0] && amount <= denominations[9]) {
          moneyPool += amount;
             System.out.println("Amount added to deposit: " + moneyPool + "kr");
@@ -39,9 +35,16 @@ public class VendingMachineDataImpl implements VendingMachineData {
 
         for (Product product : products) {
             if (product.getProductNumber() == productNumber) {
-                if (moneyPool >= product.getPrice()) {
-                   moneyPool -= product.getPrice();
+                if (moneyPool <= product.getPrice()) {
+                    break;
                 }
+                System.out.println(product.use());
+
+                if (moneyPool >= product.getPrice()) {
+                  moneyPool -= product.getPrice();
+                }
+
+
                 return product;
             }
         }
